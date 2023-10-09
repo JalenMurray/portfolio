@@ -8,7 +8,7 @@ const Projects = () => {
       <h1> My Personal Projects</h1>
       <div className="projectList">
         {PROJECTS.map((project, i) => {
-          return <Project key={i} id={i} name={project.name} image={project.image} />;
+          return <Project key={i} id={i} name={project.name} image={project.images[0].image} />;
         })}
       </div>
     </div>

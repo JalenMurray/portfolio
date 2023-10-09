@@ -1,13 +1,14 @@
 import React from 'react';
 import { LinkedIn, Email, GitHub } from '@mui/icons-material';
-import './home.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { About, HomeContainer, Name, Prompt, SkillCategories, Skills, SkillList } from './home';
 
 const Home = () => {
   return (
-    <div className="home">
-      <div className="about">
-        <h2> Hi, My Name is Jalen</h2>
-        <div className="prompt">
+    <HomeContainer>
+      <About>
+        <Name className="mb-4">Hi, My Name is Jalen</Name>
+        <Prompt className="mt-4">
           <p>A software developer with a passion for learning and creating.</p>
           <a href="https://www.linkedin.com/in/jalen-murray/">
             <LinkedIn />
@@ -18,35 +19,35 @@ const Home = () => {
           <a href="https://github.com/JalenMurray">
             <GitHub />
           </a>
-        </div>
-      </div>
-      <div className="skills">
-        <h1> Skills</h1>
-        <ol className="list">
+        </Prompt>
+      </About>
+      <Skills>
+        <h1 className="fw-bold fs-105">Skills</h1>
+        <SkillCategories>
           <li className="item">
             <h2> Front-End</h2>
-            <span>ReactJS | HTML, CSS | NPM | BootStrap | StyledComponents</span>
+            <SkillList>ReactJS | HTML, CSS | NPM | BootStrap | StyledComponents</SkillList>
           </li>
           <li className="item">
             <h2>Back-End</h2>
-            <span>NodeJS | ExpressJS | Django | MySQL | NoSQL | MongoDB | Firebase</span>
+            <SkillList>NodeJS | ExpressJS | Django | MySQL | NoSQL | MongoDB | Firebase</SkillList>
           </li>
           <li className="item">
             <h2>Languages</h2>
-            <span>Java | Javascript | Python | C | HTML | CSS | Kotlin</span>
+            <SkillList>Java | Javascript | Python | C | HTML | CSS | Kotlin</SkillList>
           </li>
           <li className="item">
             <h2>Relevant Courses</h2>
-            <span>
+            <SkillList>
               Object Oriented Programming | Discrete Structures | Algorithms | Computer Systems | Organization of
               Programming Languages | Web Development with Javascript | Programming Language Paradigms | Software
               Engineering | Mobile Development - Android | Intro to Data Science | Computer and Network Security | Intro
               to Artificial Intelligence
-            </span>
+            </SkillList>
           </li>
-        </ol>
-      </div>
-    </div>
+        </SkillCategories>
+      </Skills>
+    </HomeContainer>
   );
 };
 

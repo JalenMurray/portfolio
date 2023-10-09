@@ -34,7 +34,7 @@ const EXPERIENCE = [
     description: (
       <div>
         <p>Developed internal software using Python and Django Framework</p>
-        <p>Utitpzed Git and GitLab for version control and collaborative code management</p>
+        <p>Utilized Git and GitLab for version control and collaborative code management</p>
         <p>Maintianed relational databases to store and retireve data efficiently</p>
       </div>
     ),
