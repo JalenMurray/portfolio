@@ -7,6 +7,13 @@ import P2_List from '../assets/wiki-list.png';
 import P2_Dex from '../assets/wiki-dex.png';
 import P3_Dex from '../assets/pokemon-wiki-react.png';
 import P3_Home from '../assets/wiki-react-home.png';
+import P4_ClassList from '../assets/ams-class-list.png';
+import P4_Dashboard from '../assets/ams-dashboard.png';
+import P4_Absence from '../assets/ams-absence.png';
+import P4_Student from '../assets/ams-student.png';
+import P4_CreateAbsence from '../assets/ams-create-absence.png';
+import P4_Report from '../assets/ams-report.png';
+import P4_Announcements from '../assets/ams-announcements.png';
 import P5_Shuffled from '../assets/sorting-shuffled.png';
 import P5_Sorted from '../assets/sorting-sorted.png';
 import P6_Base from '../assets/pathfinding-base-grid.png';
@@ -54,9 +61,18 @@ export const PROJECTS = [
   },
   {
     name: 'Absence Management System',
-    images: [{}],
-    skills: 'Node.js,MySQL,Bootstrap,CAS',
-    description: 'System created for UMD professors in order to efficiently manage absences',
+    images: [
+      { image: P4_ClassList, caption: 'Instructor Class List' },
+      { image: P4_Dashboard, caption: 'Instructor Dashboard' },
+      { image: P4_Absence, caption: 'Instructor Absence View' },
+      { image: P4_Student, caption: 'Instructor Student View' },
+      { image: P4_CreateAbsence, caption: 'Create Absence View' },
+      { image: P4_Report, caption: 'Instructor Class Report' },
+      { image: P4_Announcements, caption: 'Instructor Class Announcements' },
+    ],
+    skills: 'Node.js,MySQL,Bootstrap,CAS,Collaboration,GitLab,Linux',
+    description:
+      'System created for UMD professors in order to efficiently manage absences.  Uses CAS authentication to ensure only UMD users can enter and has further checking to ensure only authorized UMD individuals can access the site (Instructors and their students).  Contains an instructor version which allows for management of absences, assignments, and announcements.  It also contains a student view which allows students to create absences and view their absences which contains information about missed assignments and further requirements.  Has a file upload system and a MySQL database to store student information.  Professors can create assignments with dates which allow them to seamlessly see what students missed an assignment and what assignments a student missed.  Was deployed using a Linux VM using NodeJS, Nginx, and MySQL.',
   },
   {
     name: 'Sorting Algorithm Visualizer',
