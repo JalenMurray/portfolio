@@ -3,8 +3,8 @@ import 'react-vertical-timeline-component/style.min.css';
 import { School, Work } from '@mui/icons-material';
 
 const iconStyles = {
-  school: { background: '#3e497a', color: '#fff' },
-  work: { background: '#e9d35b', color: '#fff' },
+  school: { background: '#14213D', color: '#E5E5E5' },
+  work: { background: '#FCA311', color: '#E5E5E5' },
 };
 
 const iconTypes = {

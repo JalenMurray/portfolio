@@ -4,7 +4,6 @@ export const HomeContainer = styled.div`
   width: 100%;
   align-items: center;
   font-family: 'Arial', sans-serif;
-  color: #3e497a;
 `;
 
 export const About = styled.div`
@@ -15,25 +14,25 @@ export const About = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #21325e;
-  color: #f0f0f0;
+  background-color: ${(props) => props.theme.oxfordBlue};
 `;
 
 export const Name = styled.h2`
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 80px;
-  color: #e9d35b;
+  color: ${(props) => props.theme.webOrange};
   height: 50px;
 `;
 
 export const Prompt = styled.div`
+  color: ${(props) => props.theme.platinum};
   width: 40%;
   font-size: 30px;
 
   svg {
     font-size: 60px;
     margin: 5px;
-    color: white;
+    color: ${(props) => props.theme.platinum};
   }
 `;
 
@@ -45,11 +44,12 @@ export const Skills = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: ${(props) => props.theme.platinum};
 
   h1,
   h2 {
     font-weight: bold;
-    color: #3e497a;
+    color: ${(props) => props.theme.oxfordBlue};
   }
 
   h1 {

@@ -1,17 +1,17 @@
-import Project from '../../components/project/project';
 import { PROJECTS } from '../../utils/projects';
-import './projects.css';
+import ProjectCard from '../../components/projects/project-card/project-card';
+import { PageContainer, Header, ProjectList } from './projects.styles';
 
 const Projects = () => {
   return (
-    <div className="projects">
-      <h1> My Personal Projects</h1>
-      <div className="projectList">
+    <PageContainer>
+      <Header>My Personal Projects</Header>
+      <ProjectList>
         {PROJECTS.map((project, i) => {
-          return <Project key={i} id={i} name={project.name} image={project.images[0].image} />;
+          return <ProjectCard key={i} project={project} />;
         })}
-      </div>
-    </div>
+      </ProjectList>
+    </PageContainer>
   );
 };
 

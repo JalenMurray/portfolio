@@ -1,5 +1,6 @@
-import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 import Home from '../src/routes/home/home.jsx';
 import Projects from '../src/routes/projects/projects';
@@ -7,9 +8,27 @@ import Experiences from './routes/experiences/experiences';
 import Navbar from './components/navbar/navbar';
 import Project from './routes/project/project';
 
+const colorTheme = {
+  oxfordBlue: '#14213D',
+  webOrange: '#FCA311',
+  platinum: '#E5E5E5',
+};
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+`;
+
 function App() {
   return (
-    <div className="App">
+    <ThemeProvider theme={colorTheme}>
+      <GlobalStyle />
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -19,7 +38,7 @@ function App() {
           <Route path="/experiences" element={<Experiences />} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </ThemeProvider>
   );
 }
 

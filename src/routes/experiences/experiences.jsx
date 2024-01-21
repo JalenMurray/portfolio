@@ -1,6 +1,7 @@
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import Experience from '../../components/experience/experience';
+import { ExperiencePageContainer } from './experiences.styles';
 
 const EXPERIENCE = [
   {
@@ -43,13 +44,13 @@ const EXPERIENCE = [
 
 const Experiences = () => {
   return (
-    <div className="experience">
+    <ExperiencePageContainer>
       <VerticalTimeline lineColor="3e497a">
         {EXPERIENCE.map((e, i) => (
           <Experience key={i} experience={e} />
         ))}
       </VerticalTimeline>
-    </div>
+    </ExperiencePageContainer>
   );
 };
 

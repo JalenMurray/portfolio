@@ -1,7 +1,7 @@
 import React from 'react';
 import { LinkedIn, Email, GitHub } from '@mui/icons-material';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { About, HomeContainer, Name, Prompt, SkillCategories, Skills, SkillList } from './home';
+import { About, HomeContainer, Name, Prompt, SkillCategories, Skills, SkillList } from './home.styles';
 
 const Home = () => {
   return (
