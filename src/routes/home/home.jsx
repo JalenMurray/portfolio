@@ -26,15 +26,17 @@ const Home = () => {
         <SkillCategories>
           <li className="item">
             <h2> Front-End</h2>
-            <SkillList>ReactJS | HTML, CSS | NPM | BootStrap | StyledComponents</SkillList>
+            <SkillList>ReactJS | HTML | CSS | NPM | BootStrap | StyledComponents | Tailwind</SkillList>
           </li>
           <li className="item">
             <h2>Back-End</h2>
-            <SkillList>NodeJS | ExpressJS | Django | MySQL | NoSQL | MongoDB | Firebase</SkillList>
+            <SkillList>
+              NodeJS | ExpressJS | Django | MySQL | NoSQL | MongoDB | Firebase | JWT Authentication | RESTful API
+            </SkillList>
           </li>
           <li className="item">
             <h2>Languages</h2>
-            <SkillList>Java | Javascript | Python | C | HTML | CSS | Kotlin</SkillList>
+            <SkillList>Java | Javascript | Python | HTML | CSS | Kotlin | C </SkillList>
           </li>
           <li className="item">
             <h2>Relevant Courses</h2>

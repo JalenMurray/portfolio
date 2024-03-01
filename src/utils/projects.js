@@ -20,17 +20,34 @@ import P6_Base from '../assets/pathfinding-base-grid.png';
 import P6_Maze from '../assets/pathfinding-maze.png';
 import P6_Searching from '../assets/pathfinding-searching.png';
 import P6_Path from '../assets/pathfinding-path.png';
-import P7_SEMESTER from '../assets/grademaster-semester.png';
-import P7_SEMESTERS from '../assets/grademaster-semesters.png';
-import P7_CLASS from '../assets/grademaster-class.png';
-import P7_DEFAULTS from '../assets/grademaster-defaults.png';
-import P7_LOCKED from '../assets/grademaster-locked.png';
-import P7_EDIT_CLASS from '../assets/grademaster-edit-class.png';
-import P7_NEW_CLASS from '../assets/grademaster-new-class.png';
+import GM_Auth from '../assets/grademaster-authpage.png';
+import GM_AssignmentType from '../assets/grademaster-assignmenttype.png';
+import GM_Class from '../assets/grademaster-class.png';
+import GM_EmptyClass from '../assets/grademaster-emptyclass.png';
+import GM_Semester from '../assets/grademaster-semester.png';
+import GM_Semesters from '../assets/grademaster-semesters.png';
+import GM_User from '../assets/grademaster-userpage.png';
 
 export const PROJECTS = [
   {
     id: 0,
+    name: 'Grade Master',
+    images: [
+      { image: GM_Class, label: 'Class Page' },
+      { image: GM_AssignmentType, label: 'Assignment Type' },
+      { image: GM_Semester, label: 'Semester Page' },
+      { image: GM_Semesters, label: 'Semesters Page' },
+      { image: GM_EmptyClass, label: 'Empty Class' },
+      { image: GM_Auth, label: 'Authentication Page' },
+      { image: GM_User, label: 'User Page' },
+    ],
+    skills: 'Fullstack, React, Django, Django REST framework, JWT Authentication, CSS, Tailwind',
+    description:
+      '(Working on deployment currently) Tool used to manage grades by calculating future and current grade possibilities. Includes various features such as locking assignment type weights, calculating dynamic values (lost points, weighted scores, class scores, semester and cumulative gpa, and distance from desired score), login to save data to database, import/export classes to allow for sharing, create a pdf report for a class, etc.',
+    github: 'https://github.com/JalenMurray/grade-master',
+  },
+  {
+    id: 1,
     name: 'Ecommerce Website',
     images: [
       { image: P1, label: 'Directory Page' },
@@ -44,7 +61,7 @@ export const PROJECTS = [
     description: 'Ecommerce clothing store made to learn React.  Does not contain real products',
   },
   {
-    id: 1,
+    id: 2,
     name: 'Pokemon Wiki',
     images: [
       { image: P2_Home, label: 'Home Page' },
@@ -57,7 +74,7 @@ export const PROJECTS = [
     description: 'Provides information on all using the PokeAPI. Styled cards used to display the information',
   },
   {
-    id: 2,
+    id: 3,
     name: 'Pokemon Wiki React',
     images: [
       { image: P3_Dex, label: 'Pokedex Display using Cards' },
@@ -70,7 +87,7 @@ export const PROJECTS = [
       'Provides information on all using the PokeAPI. Styled cards used to display the information (Similar to other Pokemon Wiki Currently, just uses React.  Hope to add more features in the future)',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Absence Management System',
     images: [
       { image: P4_ClassList, label: 'Instructor Class List' },
@@ -86,7 +103,7 @@ export const PROJECTS = [
       'System created for UMD professors in order to efficiently manage absences.  Uses CAS authentication to ensure only UMD users can enter and has further checking to ensure only authorized UMD individuals can access the site (Instructors and their students).  Contains an instructor version which allows for management of absences, assignments, and announcements.  It also contains a student view which allows students to create absences and view their absences which contains information about missed assignments and further requirements.  Has a file upload system and a MySQL database to store student information.  Professors can create assignments with dates which allow them to seamlessly see what students missed an assignment and what assignments a student missed.  Was deployed using a Linux VM using NodeJS, Nginx, and MySQL.',
   },
   {
-    id: 4,
+    id: 5,
     name: 'Sorting Algorithm Visualizer',
     images: [
       { image: P5_Shuffled, label: 'Shuffled Bars' },
@@ -98,7 +115,7 @@ export const PROJECTS = [
     link: 'https://main--cute-banoffee-d6e980.netlify.app/',
   },
   {
-    id: 5,
+    id: 6,
     name: 'Pathfinding Algorithm Visualizer',
     images: [
       { image: P6_Base, label: 'Base Grid' },
@@ -110,21 +127,5 @@ export const PROJECTS = [
     description: 'Visualizer for pathfinding algorithms.',
     github: 'https://github.com/JalenMurray/pathfinding-visualizer',
     link: 'https://main--serene-pastelito-602f17.netlify.app/',
-  },
-  {
-    id: 6,
-    name: 'Grade Master',
-    images: [
-      { image: P7_CLASS, label: 'Class Page' },
-      { image: P7_SEMESTER, label: 'Semester Page' },
-      { image: P7_SEMESTERS, label: 'Semesters Page' },
-      { image: P7_LOCKED, label: 'Locked Assignments' },
-      { image: P7_EDIT_CLASS, label: 'Edit Class Modal' },
-      { image: P7_NEW_CLASS, label: 'New Class Modal' },
-      { image: P7_DEFAULTS, label: 'Assignment Type Default Modal' },
-    ],
-    skills: 'React, Django, RESTful API, Firebase, CSS, Styled-Components, Authentication',
-    description: 'Tool used to manage grades by calculating future and current grade possibilities',
-    github: 'https://github.com/JalenMurray/grade-calculator',
   },
 ];

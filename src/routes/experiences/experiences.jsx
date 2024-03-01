@@ -30,7 +30,7 @@ const EXPERIENCE = [
   },
   {
     type: 'work',
-    dates: '2023 - Present',
+    dates: '2023 - 2024',
     title: 'Software Developer - UMIACS',
     description: (
       <div>
