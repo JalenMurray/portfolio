@@ -40,6 +40,22 @@ const EXPERIENCE = [
       </div>
     ),
   },
+  {
+    type: 'work',
+    dates: '2024 - Present',
+    title: 'Jr. Software Developer - Nessan Technologies',
+    description: (
+      <div>
+        <p>Created databases with data aggregated from multiple data sources.</p>
+        <p>Used AWS Lambda functions, and later Google Cloud functions to accomplish this.</p>
+        <p>Worked with Python and MySQL</p>
+        <p>
+          Completed business analysis to find the data sources and assist in gaining access to them.
+        </p>
+        <p>Used multiple third party APIs to gather and maintain data.</p>
+      </div>
+    ),
+  },
 ];
 
 const Experiences = () => {

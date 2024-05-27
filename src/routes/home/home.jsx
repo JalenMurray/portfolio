@@ -1,7 +1,15 @@
 import React from 'react';
 import { LinkedIn, Email, GitHub } from '@mui/icons-material';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { About, HomeContainer, Name, Prompt, SkillCategories, Skills, SkillList } from './home.styles';
+import {
+  About,
+  HomeContainer,
+  Name,
+  Prompt,
+  SkillCategories,
+  Skills,
+  SkillList,
+} from './home.styles';
 
 const Home = () => {
   return (
@@ -26,25 +34,30 @@ const Home = () => {
         <SkillCategories>
           <li className="item">
             <h2> Front-End</h2>
-            <SkillList>ReactJS | HTML | CSS | NPM | BootStrap | StyledComponents | Tailwind</SkillList>
+            <SkillList>
+              React | HTML | CSS | NPM | BootStrap | StyledComponents | Tailwind | DaisyUI
+            </SkillList>
           </li>
           <li className="item">
             <h2>Back-End</h2>
             <SkillList>
-              NodeJS | ExpressJS | Django | MySQL | NoSQL | MongoDB | Firebase | JWT Authentication | RESTful API
+              NodeJS | ExpressJS | Next.js | AWS | AWS Amplify | Google Cloud Platform | Django |
+              Docker | Kubernetes | MySQL | NoSQL | MongoDB | Firebase | JWT Authentication |
+              RESTful API | GraphQL API
             </SkillList>
           </li>
           <li className="item">
             <h2>Languages</h2>
-            <SkillList>Java | Javascript | Python | HTML | CSS | Kotlin | C </SkillList>
+            <SkillList>TypeScript | Javascript | Python | Java | Kotlin | C </SkillList>
           </li>
           <li className="item">
             <h2>Relevant Courses</h2>
             <SkillList>
-              Object Oriented Programming | Discrete Structures | Algorithms | Computer Systems | Organization of
-              Programming Languages | Web Development with Javascript | Programming Language Paradigms | Software
-              Engineering | Mobile Development - Android | Intro to Data Science | Computer and Network Security | Intro
-              to Artificial Intelligence
+              Complete React Developer | Object Oriented Programming | Discrete Structures |
+              Algorithms | Intro to Cloud Computing | Web Development with Javascript | Intro to
+              Containers | App Development using Microservices and Serverless | Software Engineering
+              | Mobile Development - Android | Intro to Data Science | Computer and Network Security
+              | Intro to Artificial Intelligence |
             </SkillList>
           </li>
         </SkillCategories>
