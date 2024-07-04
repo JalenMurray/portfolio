@@ -31,6 +31,12 @@ import grademaster_2_ExampleClass from '../assets/grademaster-2-exampleclass.png
 import grademaster_2_ExampleAssignmentType from '../assets/grademaster-2-exampleassignmenttype.png';
 import grademaster_2_GuestClass from '../assets/grademaster-2-guestclass.png';
 import grademaster_2_Documentation from '../assets/grademaster-2-documentation.png';
+import pokenamer_CardModal from '../assets/pokenamer-card-modal.png';
+import pokenamer_Categories from '../assets/pokenamer-categories.png';
+import pokenamer_Game from '../assets/pokenamer-game.png';
+import pokenamer_Games from '../assets/pokenamer-games.png';
+import pokenamer_SelectPokemon from '../assets/pokenamer-select-pokemon.png';
+import pokenamer_ThemePreview from '../assets/pokenamer-theme-preview.png';
 
 export const commerce = {
   home: commerce_Home,
@@ -87,4 +93,13 @@ export const grademaster2 = {
   at: grademaster_2_ExampleAssignmentType,
   guest: grademaster_2_GuestClass,
   documentation: grademaster_2_Documentation,
+};
+
+export const pokenamer = {
+  cardModal: pokenamer_CardModal,
+  categories: pokenamer_Categories,
+  game: pokenamer_Game,
+  games: pokenamer_Games,
+  selectPokemon: pokenamer_SelectPokemon,
+  themePreview: pokenamer_ThemePreview,
 };

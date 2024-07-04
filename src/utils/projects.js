@@ -7,6 +7,7 @@ import {
   pathfinding,
   grademaster1,
   grademaster2,
+  pokenamer,
 } from '../assets/projectImages';
 
 export const PROJECTS = [
@@ -28,6 +29,24 @@ export const PROJECTS = [
   },
   {
     id: 1,
+    name: 'PokeNamer',
+    images: [
+      { image: pokenamer.categories, label: 'Theme List Page' },
+      { image: pokenamer.themePreview, label: 'Theme Preview Page' },
+      { image: pokenamer.games, label: 'Game List Page' },
+      { image: pokenamer.game, label: 'Game Detail Page' },
+      { image: pokenamer.cardModal, label: 'Card Modal' },
+      { image: pokenamer.selectPokemon, label: 'Select Pokemon Modal' },
+    ],
+    skills: 'Fullstack, Next.js, React, Typescript, AWS, AWS Amplify, Tailwind, DaisyUI, GraphQL',
+    description:
+      "Pokenamer is a web application designed to help Pokémon players, especially those undertaking Nuzlocke challenges, by providing themed name lists for their Pokémon. With 89 themes to choose from, users can easily find creative names and manage their Pokémon's nicknames throughout the game. The site also allows players to create game instances, assign names to specific Pokémon, and track their evolution and status.",
+    link: 'https://pokenamer.com',
+    github: 'https://github.com/JalenMurray/pokenamer',
+  },
+
+  {
+    id: 2,
     name: 'Grade Master 1.0',
     images: [
       { image: grademaster1.cls, label: 'Class Page' },
@@ -44,7 +63,7 @@ export const PROJECTS = [
     github: 'https://github.com/JalenMurray/grade-master',
   },
   {
-    id: 2,
+    id: 3,
     name: 'Ecommerce Website',
     images: [
       { image: commerce.home, label: 'Directory Page' },
@@ -58,7 +77,7 @@ export const PROJECTS = [
     description: 'Ecommerce clothing store made to learn React.  Does not contain real products',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Pokemon Wiki',
     images: [
       { image: pokeWiki.home, label: 'Home Page' },
@@ -72,7 +91,7 @@ export const PROJECTS = [
       'Provides information on all using the PokeAPI. Styled cards used to display the information',
   },
   {
-    id: 4,
+    id: 5,
     name: 'Pokemon Wiki React',
     images: [
       { image: reactPokeWiki.dex, label: 'Pokedex Display using Cards' },
@@ -85,7 +104,7 @@ export const PROJECTS = [
       'Provides information on all using the PokeAPI. Styled cards used to display the information (Similar to other Pokemon Wiki Currently, just uses React.  Hope to add more features in the future)',
   },
   {
-    id: 5,
+    id: 6,
     name: 'Absence Management System',
     images: [
       { image: ams.classList, label: 'Instructor Class List' },
@@ -101,7 +120,7 @@ export const PROJECTS = [
       'System created for UMD professors in order to efficiently manage absences.  Uses CAS authentication to ensure only UMD users can enter and has further checking to ensure only authorized UMD individuals can access the site (Instructors and their students).  Contains an instructor version which allows for management of absences, assignments, and announcements.  It also contains a student view which allows students to create absences and view their absences which contains information about missed assignments and further requirements.  Has a file upload system and a MySQL database to store student information.  Professors can create assignments with dates which allow them to seamlessly see what students missed an assignment and what assignments a student missed.  Was deployed using a Linux VM using NodeJS, Nginx, and MySQL.',
   },
   {
-    id: 6,
+    id: 7,
     name: 'Sorting Algorithm Visualizer',
     images: [
       { image: sorting.shuffled, label: 'Shuffled Bars' },
@@ -113,7 +132,7 @@ export const PROJECTS = [
     link: 'https://main--cute-banoffee-d6e980.netlify.app/',
   },
   {
-    id: 7,
+    id: 8,
     name: 'Pathfinding Algorithm Visualizer',
     images: [
       { image: pathfinding.base, label: 'Base Grid' },
