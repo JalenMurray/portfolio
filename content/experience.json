@@ -1,0 +1,38 @@
+[
+  {
+    "role": "Senior Consultant - Full-Stack Software Engineer",
+    "company": "Infinitive Consulting",
+    "period": "July 2026 - Present",
+    "detail": "Designed and developed features for Capital One’s internal insights application using TypeScript and React to develop front-end and back-end pages and features for product teams"
+  },
+  {
+    "role": "Senior Full-Stack Software Developer",
+    "company": "Nessan Technologies",
+    "period": "July 2025 - July 2026",
+    "detail": "Built a full-stack executive intelligence platform with Next.js, React, TypeScript, Tailwind, and shadcn/ui — including complex UI like expandable data tables, advanced filtering, and CSV export — backed by a serverless Google Cloud Functions API layer. Integrated Vertex AI and Gemini into the data pipeline to power AI-assisted web scraping and Google Search fact-grounding, automating data enrichment and verification."
+  },
+  {
+    "role": "Consultant - Full-Stack Software Engineer",
+    "company": "Infinitive",
+    "period": "Jan 2025 - July 2025",
+    "detail": "Designed and developed features for Slingshot, Capital One Software's cloud platform for monitoring and optimizing Snowflake and Databricks resources, using TypeScript and React across front-end and back-end pages centered on serverless Databricks and adaptive Snowflake warehouses. Built views in PostgreSQL, ClickHouse, and Snowflake to support the platform's data layer."
+  },
+  {
+    "role": "Junior Software Developer",
+    "company": "Nessan Technologies",
+    "period": "Jan 2024 - Jan 2025",
+    "detail": "Built and maintained Python/MySQL databases that aggregated data from multiple third-party APIs, reducing development time and improving search efficiency for users. Migrated data processing to serverless functions (AWS Lambda, later Google Cloud Functions), reducing operational costs and increasing uptime."
+  },
+  {
+    "role": "Software Developer",
+    "company": "University of Maryland Institute for Advanced Computer Studies (UMIACS)",
+    "period": "July 2022 - Jan 2024",
+    "detail": "Engineered an internal software solution with Python and Django, streamlining workflow processes and reducing manual data entry. Used Git and GitLab for version control and collaborative code management to speed up time to production, while maintaining relational databases for efficient data storage and retrieval."
+  },
+  {
+    "role": "System Administrator",
+    "company": "University of Maryland Institute for Advanced Computer Studies (UMIACS)",
+    "period": "June 2021 - June 2023",
+    "detail": "Provided helpdesk support, assisting a high volume of users with technical issues, while executing software and hardware installations and configurations across the organization's workstations to reduce downtime and boost team productivity. Developed internal software using Python and Django to increase the efficiency of system administrator tasks."
+  }
+]

@@ -4,17 +4,19 @@ import { useEffect, useState } from "react";
 import Window, { type Position, type Size } from "./Window";
 import Terminal, { type CommandTarget } from "./Terminal";
 import ActivityFeed from "./ActivityFeed";
+import CowboysStatus from "./CowboysStatus";
 import ProjectsPanel from "./panels/ProjectsPanel";
 import AboutPanel from "./panels/AboutPanel";
 import ContactPanel from "./panels/ContactPanel";
 import type { ProjectMeta } from "@/lib/projects";
+import type { CowboysStatusData } from "@/lib/cowboys";
 
 type Activity = { type: string; repo: string; date: string };
 
-type PermanentWindowId = "terminal" | "activity";
+type PermanentWindowId = "terminal" | "activity" | "cowboys";
 type WindowId = PermanentWindowId | CommandTarget;
 
-const PERMANENT_WINDOWS: PermanentWindowId[] = ["terminal", "activity"];
+const PERMANENT_WINDOWS: PermanentWindowId[] = ["terminal", "activity", "cowboys"];
 
 // Positioned below both permanent windows (terminal bottom ~396, activity bottom ~400) so opening
 // one doesn't bury the terminal you just clicked a command in.
@@ -48,7 +50,15 @@ const DYNAMIC_WINDOW_CONFIG: Record<
 // Below this width, dragging windows around does more harm than good — fall back to a stacked, static layout.
 const DESKTOP_BREAKPOINT = 860;
 
-export default function Desktop({ activity, projects }: { activity: Activity[]; projects: ProjectMeta[] }) {
+export default function Desktop({
+  activity,
+  projects,
+  cowboys,
+}: {
+  activity: Activity[];
+  projects: ProjectMeta[];
+  cowboys: CowboysStatusData;
+}) {
   const [order, setOrder] = useState<WindowId[]>([...PERMANENT_WINDOWS]);
   const [interactive, setInteractive] = useState(false);
 
@@ -91,7 +101,7 @@ export default function Desktop({ activity, projects }: { activity: Activity[]; 
         interactive={interactive}
         onFocus={() => focus("terminal")}
       >
-        <Terminal onCommand={openWindow} />
+        <Terminal onCommand={openWindow} projects={projects} />
       </Window>
 
       <Window
@@ -105,6 +115,19 @@ export default function Desktop({ activity, projects }: { activity: Activity[]; 
         onFocus={() => focus("activity")}
       >
         <ActivityFeed activity={activity} />
+      </Window>
+
+      <Window
+        title="cowboys — status"
+        defaultPosition={{ x: 660, y: 420 }}
+        defaultSize={{ width: 380, height: 180 }}
+        minWidth={280}
+        minHeight={140}
+        zIndex={10 + order.indexOf("cowboys")}
+        interactive={interactive}
+        onFocus={() => focus("cowboys")}
+      >
+        <CowboysStatus status={cowboys} />
       </Window>
 
       {(Object.keys(DYNAMIC_WINDOW_CONFIG) as CommandTarget[]).map((id) => {
