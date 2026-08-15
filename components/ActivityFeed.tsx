@@ -25,42 +25,27 @@ function timeAgo(iso: string) {
 type Activity = { type: string; repo: string; date: string };
 
 export default function ActivityFeed({ activity }: { activity: Activity[] }) {
-  if (activity.length === 0) return null;
+  if (activity.length === 0) {
+    return (
+      <p className="mono" style={{ fontSize: "12px", color: "#8A8D92", margin: 0 }}>
+        no recent public activity
+      </p>
+    );
+  }
 
   return (
-    <div
-      style={{
-        background: "var(--bg-panel)",
-        border: "0.5px solid var(--text-muted)",
-        borderRadius: "8px",
-        overflow: "hidden",
-        maxWidth: "640px",
-        marginTop: "16px",
-      }}
-    >
-      <div
-        style={{
-          padding: "10px 14px",
-          borderBottom: "0.5px solid var(--text-muted)",
-        }}
-      >
-        <span className="mono" style={{ fontSize: "12px", color: "#8A8D92" }}>
-          jalen@portfolio:~$ gh activity --recent
-        </span>
-      </div>
-      <div style={{ padding: "14px 20px" }}>
-        {activity.map((event, i) => (
-          <p
-            key={i}
-            className="mono"
-            style={{ fontSize: "12px", margin: "0 0 8px", color: "var(--text-primary)" }}
-          >
-            <span style={{ color: "var(--accent-teal)" }}>{formatEvent(event.type)}</span>{" "}
-            {event.repo}{" "}
-            <span style={{ color: "#8A8D92" }}>· {timeAgo(event.date)}</span>
-          </p>
-        ))}
-      </div>
+    <div>
+      {activity.map((event, i) => (
+        <p
+          key={i}
+          className="mono"
+          style={{ fontSize: "12px", margin: "0 0 8px", color: "var(--text-primary)" }}
+        >
+          <span style={{ color: "var(--accent-teal)" }}>{formatEvent(event.type)}</span>{" "}
+          {event.repo}{" "}
+          <span style={{ color: "#8A8D92" }}>· {timeAgo(event.date)}</span>
+        </p>
+      ))}
     </div>
   );
 }

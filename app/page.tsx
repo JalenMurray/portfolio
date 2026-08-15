@@ -1,21 +1,14 @@
-import Terminal from "@/components/Terminal";
-import ActivityFeed from "@/components/ActivityFeed";
+import Desktop from "@/components/Desktop";
 import { getRecentActivity, GITHUB_USERNAME } from "@/lib/github";
+import { getProjects } from "@/lib/projects";
 
 export default async function Home() {
   const activity = await getRecentActivity(GITHUB_USERNAME);
+  const projects = getProjects();
 
   return (
-    <main
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        padding: "80px 20px",
-      }}
-    >
-      <Terminal />
-      <ActivityFeed activity={activity} />
+    <main>
+      <Desktop activity={activity} projects={projects} />
     </main>
   );
 }
